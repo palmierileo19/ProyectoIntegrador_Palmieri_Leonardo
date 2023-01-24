@@ -11,18 +11,18 @@
     <!-- Bootstrap -->
     <link href="bootstrap-4.0.0-dist/css/bootstrap.css" rel="stylesheet">
 
-    <!--Materialize -->
-    <!--<link href="css/materialize.css" rel="stylesheet">--> 
-
     <!--Import Iconos redes sociales-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Mi css -->
     <link href="css/estilos.css" rel="stylesheet">
 
+    <script src="js/funciones.js"></script>
+
     <title>Mi Porfolio</title>
 </head>
-<body>
+<body onload="inicializar_vista()">
+
 
     </br> </br>
     <div class="container">
@@ -37,13 +37,17 @@
                 <!--Nombre / Profesion-->
                 <div class="contenedor01">
                     <span class="nombre_cv">Leonardo Palmieri</span>
-                    <!--<p><div class="trabajo">Front-end Developer</div></p>-->
+                    <p><div class="trabajo">Programador</div></p>
                 </div>
 
                 <div class="contenedor02">
                     <!--Perfil Profesional-->
                     <div class="row">
-                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2"><i class="material-icons">account_box</i></div>                                                              
+                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2">
+                            <div class="contenedor_icono_izq">
+                                <i class="material-icons">account_box</i>
+                            </div>    
+                        </div>                                                              
                         <div class="col-sm-12 col-md-9 col-lg-9 col-xl-10">
                             <p class="parrafo01"> Soy una persona con una alta capacidad de compromiso y liderazgo, con decisión e
                                 iniciativa, excelentes relaciones interpersonales y trabajo en equipo, habilidad
@@ -65,7 +69,11 @@
 
                     <!--direcciom-->
                     <div class="row">
-                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2"><i class="small material-icons">location_on</i></div>
+                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2">
+                            <div class="contenedor_icono_izq"> 
+                                <i class="small material-icons">location_on</i>
+                            </div>    
+                        </div>
                         <div class="col-sm-12 col-md-9 col-lg-9 col-xl-10">
                             <p class="parrafo01">Juncal 2824</p>
                             <p class="parrafo01">Buenos Aires, Lanus</p>
@@ -81,7 +89,11 @@
 
                     <!--Telefonos-->
                     <div class="row">
-                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2"><i class="small material-icons">local_phone</i></div>
+                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2">
+                            <div class="contenedor_icono_izq"> 
+                                <i class="small material-icons">local_phone</i>
+                            </div>    
+                        </div>
                         <div class="col-sm-12 col-md-9 col-lg-9 col-xl-10">
                             <p class="parrafo01_strong">Celular</p>
                             <p class="parrafo01">15-5823-3700</p>
@@ -96,7 +108,12 @@
 
                     <!--Mail-->
                     <div class="row">
-                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2"><i class="small material-icons">email</i></div>
+                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2">
+                            <div class="contenedor_icono_izq"> 
+                                <i class="small material-icons">email</i>
+                            </div>
+                        </div>
+
                         <div class="col-sm-12 col-md-9 col-lg-9 col-xl-10">
                             <p class="parrafo01_strong">Trabajo</p>
                             <p class="parrafo01"><a href="mailto:">lpalmieri@cmlz.org</a></p>
@@ -114,7 +131,11 @@
 
                     <!--Conocimientos Informaticos-->
                     <div class="row">
-                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2"><i class="small material-icons">playlist_add_check</i></div>
+                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2">
+                            <div class="contenedor_icono_izq"> 
+                                <i class="small material-icons">playlist_add_check</i>
+                            </div>
+                        </div>
                         <div class="col-sm-12 col-md-9 col-lg-9 col-xl-10">
                             <p class="parrafo01_strong">Conocimientos Informaticos</p>
 
@@ -143,7 +164,11 @@
 
                     <!--Idioma-->
                     <div class="row">
-                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2"><i class="small material-icons">message</i></div>
+                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2">
+                            <div class="contenedor_icono_izq">
+                                <i class="small material-icons">message</i>
+                            </div>
+                        </div>
                         <div class="col-sm-12 col-md-9 col-lg-9 col-xl-10">
                             <p class="parrafo01_strong">Idiomas</p>
                             <ul class="lista01">
@@ -176,74 +201,77 @@
             </div>
 
 
-            <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">    
+            <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">    
                 <div class="card">
                     <!--experiencia Laboral-->
                     <div class="contenedor01">
-                        <div class="row">
-                            <div class="col s12 m12 l12 xl12">
+                        
+                        <div class="row" onclick="mostrar_ocultar_div('visualizacion_laboral','mas_menos_laboral')">
+                           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">    
                                 <div class="contenedor_titulo01">
-                                    <span ><i class="fa fa-briefcase"></span></i><label class="titulo01">Experiencia Laborar</label>
+                                    <span ><i class="fa fa-briefcase"></span></i><label class="titulo01">Experiencia Laboral</label><span class="final_titulo"><i class="fa fa-plus-square-o" aria-hidden="true" id="mas_menos_laboral"></i> </span>
                                 </div>                                     
                             </div>
                            
                         </div>
                         
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">                   
-                                <div class="contenedor03">                                        
-                                    <p class="parrafo01_strong">Programador</p>
-                                    <p><span class="texto_aclaracion2">Osmecon Salud Lomas De Zamora | 2008 - Hasta la Actualidad</span></p>
-                                    <p>Desde 2008 me encuentro realizando las siguentes tareas:</p>
-                                    <p>
-                                        <ul>
-                                            <li>Diseño y desarrollos de sistemas en Informix 4gl.</li>
-                                            <li>Diseño y desarrollos de sistemas en PHP</li>
-                                            <li>Manejo de bases de datos en SQL Y MYSQL</li>
-                                        </ul>
-                                    </p>
+                        <div id="visualizacion_laboral">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">                   
+                                    <div class="contenedor03">                                        
+                                        <p class="parrafo01_strong">Programador</p>
+                                        <p><span class="texto_aclaracion2">Osmecon Salud Lomas De Zamora | 2008 - Hasta la Actualidad</span></p>
+                                        <p>Desde 2008 me encuentro realizando las siguentes tareas:</p>
+                                        <p>
+                                            <ul>
+                                                <li>Diseño y desarrollos de sistemas en Informix 4gl.</li>
+                                                <li>Diseño y desarrollos de sistemas en PHP</li>
+                                                <li>Manejo de bases de datos en SQL Y MYSQL</li>
+                                            </ul>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">                        
-                                <div class="divisor"></div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"> 
-                                <div class="contenedor03">    
-                                    <p class="parrafo01_strong">Soporte técnico telefónico para Arnet</p>
-                                    <p><span class="texto_aclaracion2">Consultora Pearson S.A. | 2007 - 2008</span></p>
-                                    <p>Brindaba soporte técnico telefónico para problemas de conexión de internet</p>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">                        
+                                    <div class="divisor"></div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">                        
-                                <div class="divisor"></div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                <div class="contenedor03">      
-                                    <p class="parrafo01_strong">Operario</p>
-                                    <p><span class="texto_aclaracion2">McDonald's | 2001 - 2007</span></p>
-                                    <p>Realizaba las siguentes tareas</p>
-                                    <p>
-                                        <ul>
-                                            <li>Técnico en Reparación de PC en ITA (Instituto Tecnológico Argentino)</li>
-                                            <li>Técnico en Redes en ITA (Instituto Tecnológico Argentino)</li>
-                                            <li>Curso de Programación Java en DELFOS</li>
-                                            <li>Carrera Programador Web En Educación IT</li>
-                                        </ul>
-                                    </p>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"> 
+                                    <div class="contenedor03">    
+                                        <p class="parrafo01_strong">Soporte técnico telefónico para Arnet</p>
+                                        <p><span class="texto_aclaracion2">Consultora Pearson S.A. | 2007 - 2008</span></p>
+                                        <p>Brindaba soporte técnico telefónico para problemas de conexión de internet</p>
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">                        
+                                    <div class="divisor"></div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                    <div class="contenedor03">      
+                                        <p class="parrafo01_strong">Operario</p>
+                                        <p><span class="texto_aclaracion2">McDonald's | 2001 - 2007</span></p>
+                                        <p>Realizaba las siguentes tareas</p>
+                                        <p>
+                                            <ul>
+                                                <li>Atencion al publico</li>
+                                                <li>Manejo de cocina</li>
+                                                <li>Entrenamiento del personal</li>
+                                            </ul>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -253,65 +281,75 @@
                 <div class="card">
                     <!--Estudios-->
                     <div class="contenedor01">
-                        <div class="contenedor03">   
-                            <div class="col s12 m12 l12 xl12">
+
+                        <div class="row">   
+                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" onclick="mostrar_ocultar_div('visualizacion_estudios','mas_menos_estudios')">
                                 <div class="contenedor_titulo01">
-                                    <span ><i class="fa fa-book"></span></i><label class="titulo01">Estudios</label>
+                                    <span ><i class="fa fa-book"></span></i><label class="titulo01">Estudios</label><span class="final_titulo"><i class="fa fa-plus-square-o" aria-hidden="true" id="mas_menos_estudios"></i> </span>
                                 </div> 
                             </div>
                         </div>
                         
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"> 
-                                <div class="contenedor03">   
-                                    <p class="parrafo01_strong">ESTUDIOS SECUNDARIOS</p>
-                                    <p><span class="texto_aclaracion2">E.E.T Nº 9  A. J. Rodriguez. </span></p>
-                                    <p>Titulo optenido: Técnico en Electrónica</p>
-                                </div>   
-                            </div>
-                        </div>
+                        <div id="visualizacion_estudios"> 
 
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">                        
-                                <div class="divisor"></div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"> 
+                                    <div class="contenedor03">   
+                                        <p class="parrafo01_strong">ESTUDIOS SECUNDARIOS</p>
+                                        <p><span class="texto_aclaracion2">E.E.T Nº 9  A. J. Rodriguez. </span></p>
+                                        <p>Titulo optenido: Técnico en Electrónica</p>
+                                    </div>   
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"> 
-                                <div class="contenedor03">
-                                    <p class="parrafo01_strong">ESTUDIO UNIVERSITARIO </p>
-                                    <p><span class="texto_aclaracion2">U.B.A.</span></p>
-                                    <p>Estudiante avanzado de Licenciatura en Informática .</p>
-                                </div>   
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">                        
+                                    <div class="divisor"></div>
+                                </div>
                             </div>
-                        </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"> 
+                                    <div class="contenedor03">
+                                        <p class="parrafo01_strong">ESTUDIO UNIVERSITARIO </p>
+                                        <p><span class="texto_aclaracion2">U.B.A.</span></p>
+                                        <p>Estudiante avanzado de Licenciatura en Informática .</p>
+                                    </div>   
+                                </div>
+                            </div>
                         
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">                        
-                                <div class="divisor"></div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">                        
+                                    <div class="divisor"></div>
+                                </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"> 
+                                    <div class="contenedor03">
+                                        <p class="parrafo01_strong">CURSOS </p>
+                                        <p><span class="texto_aclaracion2"></span></p>
+                                        <p>Curso Realizados:</p>
+                                        <p>
+                                            <ul>
+                                                <li>Técnico en Reparación de PC en ITA (Instituto Tecnológico Argentino)</li>
+                                                <li>Técnico en Redes en ITA (Instituto Tecnológico Argentino)</li>
+                                                <li>Curso de Programación Java en DELFOS</li>
+                                                <li>Carrera Programador Web En Educación IT</li>
+                                            
+                                            </ul>
+                                        </p>
+                                    </div>   
+                                </div>
+                            </div>
+
                         </div>
 
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12"> 
-                                <div class="contenedor03">
-                                    <p class="parrafo01_strong">CURSOS </p>
-                                    <p><span class="texto_aclaracion2"></span></p>
-                                    <p>Curso Realizados:</p>
-                                    <p>
-                                        <ul>
-                                            <li>Atencion al publico</li>
-                                            <li>Manejo de cocina</li>
-                                            <li>Entrenamiento del personal</li>
-                                        </ul>
-                                    </p>
-                                </div>   
-                            </div>
-                        </div>
                     </div>
+
                 </div>
 
+                <div class="divisor2"></div>
 
             </div> 
         </div>
