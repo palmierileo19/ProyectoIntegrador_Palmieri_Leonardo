@@ -6,19 +6,22 @@ function inicializar_vista(){
 }
 
 
-
+/** funcion muestra/oculta div ademas de cambiar icono +/-  
+ *  pasando por paremetros el div a mostrar/ocultar y el contenedor
+ * del icono +/-
+*/
 function mostrar_ocultar_div(div_mostrar,icon_mas_menos) {
 
-    var x = document.getElementById(div_mostrar);
+    var el_div = document.getElementById(div_mostrar);
     var icono = document.getElementById(icon_mas_menos);
 
-    if (x.style.display === "none") {
+    if (el_div.style.display === "none") {
 
-        x.style.display = "block";
+        el_div.style.display = "block";
         icono.className = "fa fa-minus-square-o";
 
     } else {
-        x.style.display = "none";
+        el_div.style.display = "none";
         icono.className = "fa fa-plus-square-o";
     }
 }
